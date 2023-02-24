@@ -1,0 +1,105 @@
+<section>
+  <div class="col col-md-4">
+    <header>
+      <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#">TESTE APTIDÃO</a>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarCollapse"
+            aria-controls="navbarCollapse"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <form class="d-flex">
+            <input
+              class="form-control me-2"
+              type="search"
+              placeholder="Pesquise"
+              aria-label="Pesquise"
+            />
+            <button class="btn btn-light" type="submit">Pesquise</button>
+          </form>
+        </div>
+      </nav>
+    </header>
+  </div>
+</section>
+<br>
+<br>
+  <div class="fixed text-center " >
+    <button
+      [routerLink]="'form'"
+      type="button"
+      class="btn btn-dark btn-lg btn-block"
+    >
+      + Adicionar novo Usuário
+    </button>
+  </div>
+
+<tr *ngFor="let user of responseUsers.data">
+  <section class="py-5">
+    <div class="container px-4 px-lg-4">
+      <div class="justify-content-center">
+        <div class="col mb-5">
+          <div class="card h-100">
+            <img
+              class="card-img-top"
+              routerLink="/user"
+              img
+              src="{{ user.avatar }}"
+              width="320"
+              height="205"
+              alt="..."
+            />
+            <div class="card-body p-4">
+              <div class="text-center">
+                <h2 class="fw-bolder">{{ user.first_name }}</h2>
+                <h5 class="fw-bolder">{{ user.last_name }}</h5>
+                <td>Nª{{ user.id }}</td>
+                <p>
+                  <td>{{ user.email }}</td>
+                </p>
+                <p>
+                  <td>
+                    &nbsp;
+                    <button
+                      class="btn btn-warning"
+                      routerLink="/user/edit/{{ user.id }}"
+                    >
+                      Editar</button
+                    >&nbsp;&nbsp;&nbsp;&nbsp;
+                  </td>
+                  <td>
+                    <button
+                      class="btn btn-danger"
+                      routerLink="/user/delete/{{ user.id }}"
+                    >
+                      Deletar
+                    </button>
+                  </td>
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</tr>
+<footer class="bg-light text-center text-lg-start">
+  <!-- Copyright -->
+  <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.308)">
+    © Gilton Carvalho Santana
+    <a
+      class="text-dark"
+      href="https://www.linkedin.com/in/gilton-carvalho-a9a422125/"
+      >Linkedin</a
+    >
+  </div>
+  <!-- Copyright -->
+</footer>
