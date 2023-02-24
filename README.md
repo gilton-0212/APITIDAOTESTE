@@ -1,6 +1,6 @@
-# UserCRUD
+# CRUD - TESTE DE APITIDÃO
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.3.0.
+  CRUD de usuários em ANGULAR consumindo dados da API fake do site:https://reqres.in/ .
 
 ## TELA DE INICIO
 
